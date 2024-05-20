@@ -8,9 +8,9 @@ const mainRouter = require("./routes/index");
 const app = express();
 app.use(express.json());
 app.use(cors());
-const PORT=8000;
 dotenv.config();
 
+const PORT= process.env.PORT || 8000;
 
 app.use("/api/v1", mainRouter);
 
